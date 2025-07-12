@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LUDO GAME</title>
+</head>
+
+<body>
+    <!-- Opening Screen -->
+    <div id="opening-screen">
+        <h1>Ludo Game</h1>
+        <div class="game-icon">
+            <div class="icon-square red"></div>
+            <div class="icon-square green"></div>
+            <div class="icon-square yellow"></div>
+            <div class="icon-square blue"></div>
+        </div>
+        <button id="start-game">Start Game</button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="hidden">
+        <p>Loading... Please wait</p>
+        <div class="loader"></div>
+    </div>
+
+    <!-- Game Board -->
+    <div id="game-board" class="hidden">
+        <div class="board">
+            <!-- Red Home -->
+            <div class="home red-home">
+                <div class="home-inner"></div>
+            </div>
+
+            <!-- Green Home -->
+            <div class="home green-home">
+                <div class="home-inner"></div>
+            </div>
+
+            <!-- Yellow Home -->
+            <div class="home yellow-home">
+                <div class="home-inner"></div>
+            </div>
+
+            <!-- Blue Home -->
+            <div class="home blue-home">
+                <div class="home-inner"></div>
+            </div>
+
+            <!-- Center -->
+            <div class="center"></div>
+
+            <!-- Dice Container -->
+            <div id="dice-container"></div>
+        </div>
+
+        <button id="roll-button">Roll</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

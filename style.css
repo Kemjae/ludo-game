@@ -1,0 +1,269 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Opening Screen */
+#opening-screen {
+    text-align: center;
+}
+
+#opening-screen h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.game-icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 2rem;
+    transform: rotate(45deg);
+}
+
+.icon-square {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+#start-game {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background:linear-gradient( 90deg, blue,  green);
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+#start-game:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Loading Screen */
+#loading-screen {
+    text-align: center;
+}
+
+#loading-screen p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Game Board */
+#game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.board {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 10px solid white;
+    border-radius: 3rem;
+    background-image: url(image/ludo.jpg);
+}
+
+/* Board styling: Ludo lines and colors */
+.board::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        /* cross lines */
+        linear-gradient(to right, #000 2px, transparent 2px) 33.33% 0 / 33.33% 100% repeat-x,
+        linear-gradient(to bottom, #000 2px, transparent 2px) 0 33.33% / 100% 33.33% repeat-y;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.red-home {
+    background-color: red;
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 2rem 0rem 0rem 0rem;
+}
+
+.green-home {
+    background-color: green;
+    grid-column: 3;
+    grid-row: 1;
+    border-radius: 0rem 2rem 0rem 0rem;
+
+}
+
+.yellow-home {
+    background-color: yellow;
+    grid-column: 3;
+    grid-row: 3;
+    border-radius: 0rem 0rem 2rem 0rem;
+
+}
+
+.blue-home {
+    background-color: blue;
+    grid-column: 1;
+    grid-row: 3;
+    border-radius: 0rem 0rem 0rem 2rem;
+
+}
+
+.center {
+    grid-column: 2;
+    grid-row: 2;
+    background: radial-gradient(#eee, white);
+    border-radius: 2rem;
+}
+
+/* Roll Button Styling */
+#roll-button {
+    padding: 14px 28px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, red, yellow);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+#roll-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.7);
+}
+
+/* Dice Styles */
+
+.dice {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: dotted 5px black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    animation: drop 0.8 s ease-in-out;
+    z-index: 10;
+    
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-200px) rotate(0deg);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(30px) rotate(360deg);
+    }
+    100% {
+        transform: translateY(0) rotate(720deg);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@media (max-width: 600px) {
+    .board {
+        width: 300px;
+        height: 300px;
+    }
+    #roll-button {
+        padding: 12px 20px;
+        font-size: 1.6rem;
+    }
+    .dice {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
