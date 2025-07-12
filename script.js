@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
             { bottom: '10%', left: '10%' }  // Bottom-left (blue corner)
         ];
         
-        // Select a random corner
         const randomCorner = corners[Math.floor(Math.random() * corners.length)];
         
         // Apply position styles
