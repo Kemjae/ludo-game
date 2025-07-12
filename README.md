@@ -50,6 +50,7 @@ Working on this project helped me improve in several areas:
 ---
 
 🙏 Acknowledgements
+
 This project is part of my personal learning process in front-end development. If you are also learning JavaScript, I hope this inspires you to build something small and improve step by step!
 
 🚀 Live Demo
