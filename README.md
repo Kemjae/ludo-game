@@ -65,6 +65,9 @@ This project is part of my personal learning process in front-end development. I
 If you like this project or want to collaborate:
 
 •	Tik tok : @kem_jae
+
 •	Instagram: @kem_jae_
+
 •	Twitter(X): @kemjaey
+
 •	Email: lilkemc567@gmail.com
