@@ -7,7 +7,9 @@ I created this project as part of my learning journey in JavaScript. It helped m
 ---
 
  📂 Project Structure
+ 
 ludo-game/
+
 ├── index.html       
 ├── style.css        
 ├── script.js        
