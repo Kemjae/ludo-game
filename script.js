@@ -58,10 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function positionDiceRandomly(dice) {
         // Define the four corners of the board
         const corners = [
-            { top: '10%', left: '10%' },   // Top-left (red corner)
-            { top: '10%', right: '10%' },  // Top-right (green corner)
-            { bottom: '10%', right: '10%' }, // Bottom-right (yellow corner)
-            { bottom: '10%', left: '10%' }  // Bottom-left (blue corner)
+            { top: '10%', left: '10%' },   
+            { top: '10%', right: '10%' }, 
+            { bottom: '10%', right: '10%' },
+            { bottom: '10%', left: '10%' },
         ];
         
         const randomCorner = corners[Math.floor(Math.random() * corners.length)];
